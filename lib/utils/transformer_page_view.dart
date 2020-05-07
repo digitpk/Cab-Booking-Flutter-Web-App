@@ -444,7 +444,7 @@ class TransformerPageView extends StatefulWidget {
     this.index,
     Duration duration,
     this.curve: Curves.ease,
-    this.viewportFraction: 1.0,
+    this.viewportFraction = 1.0,
     this.loop: false,
     this.scrollDirection = Axis.horizontal,
     this.physics,

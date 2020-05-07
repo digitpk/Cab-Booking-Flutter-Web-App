@@ -3,10 +3,9 @@ import 'package:flutter_web/material.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
-    Column _buildButtonColumn(Color color, IconData icon, String label) {
+    Column _buildButtonColumn(Color color, IconData icon, String label) async {
       return Column(
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -43,15 +42,17 @@ class MyApp extends StatelessWidget {
     Widget textSection = Container(
       padding: const EdgeInsets.all(32),
       child: Text(
-        'Lake Oeschinen lies at the foot of the Blüemlisalp in the Bernese '
-        'Alps. Situated 1,578 meters above sea level, it is one of the '
-        'larger Alpine Lakes. A gondola ride from Kandersteg, followed by a '
-        'half-hour walk through pastures and pine forest, leads you to the '
-        'lake, which warms to 20 degrees Celsius in the summer. Activities '
-        'enjoyed here include rowing, and riding the summer toboggan run.',
-        softWrap: true,
-          style: TextStyle(fontFamily: "Open Sans",fontSize: 14.0,)
-      ),
+          'Lake Oeschinen lies at the foot of the Blüemlisalp in the Bernese '
+          'Alps. Situated 1,578 meters above sea level, it is one of the '
+          'larger Alpine Lakes. A gondola ride from Kandersteg, followed by a '
+          'half-hour walk through pastures and pine forest, leads you to the '
+          'lake, which warms to 20 degrees Celsius in the summer. Activities '
+          'enjoyed here include rowing, and riding the summer toboggan run.',
+          softWrap: true,
+          style: TextStyle(
+            fontFamily: "Open Sans",
+            fontSize: 14.0,
+          )),
     );
 
     Widget titleSection = Container(
@@ -69,10 +70,9 @@ class MyApp extends StatelessWidget {
                   child: Text(
                     'Jadav Chirag',
                     style: TextStyle(
-                      fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.bold,
                         fontSize: 24.0,
-                        fontFamily: "Open Sans"
-                    ),
+                        fontFamily: "Open Sans"),
                   ),
                 ),
                 Text(
@@ -117,4 +117,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
